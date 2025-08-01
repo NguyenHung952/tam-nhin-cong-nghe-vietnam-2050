@@ -2,8 +2,6 @@
 
 Một giao diện infographic hiện đại, trực quan, minh hoạ tầm nhìn công nghệ của Việt Nam đến năm 2050: từ tăng trưởng kinh tế số, điện tử – viễn thông đến ứng dụng AI và các thách thức – cơ hội trong quá trình chuyển đổi số.
 
-## 🖼 Demo
-
 ## 💡 Mục tiêu
 
 - Tổng hợp dữ liệu chiến lược phát triển công nghệ của Việt Nam đến 2050
