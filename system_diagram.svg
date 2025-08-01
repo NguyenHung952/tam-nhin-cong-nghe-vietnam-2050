@@ -1,0 +1,54 @@
+<svg width="600" height="350" xmlns="http://www.w3.org/2000/svg" style="font-family: Arial, sans-serif;">
+  <style>
+    .box {
+      fill: #f3f4f6;
+      stroke: #4b5563;
+      stroke-width: 1.5;
+      rx: 10;
+      ry: 10;
+    }
+    .label {
+      font-size: 14px;
+      text-anchor: middle;
+      fill: #111827;
+    }
+    .arrow {
+      marker-end: url(#arrowhead);
+      stroke: #4b5563;
+      stroke-width: 2;
+    }
+  </style>
+
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#4b5563" />
+    </marker>
+  </defs>
+
+  <!-- Cảm biến gas -->
+  <rect x="40" y="40" width="100" height="60" class="box"/>
+  <text x="90" y="75" class="label">MQ-2 Sensor</text>
+
+  <!-- ESP32 -->
+  <rect x="180" y="140" width="100" height="60" class="box"/>
+  <text x="230" y="175" class="label">ESP32</text>
+
+  <!-- Quạt -->
+  <rect x="320" y="40" width="100" height="60" class="box"/>
+  <text x="370" y="75" class="label">Quạt</text>
+
+  <!-- Server -->
+  <rect x="460" y="190" width="100" height="60" class="box"/>
+  <text x="510" y="225" class="label">Server</text>
+
+  <!-- Dashboard -->
+  <rect x="380" y="120" width="120" height="60" class="box"/>
+  <text x="440" y="155" class="label">Dashboard</text>
+
+  <!-- Arrows -->
+  <line x1="140" y1="70" x2="180" y2="170" class="arrow"/>
+  <line x1="280" y1="170" x2="320" y2="70" class="arrow"/>
+  <line x1="280" y1="170" x2="380" y2="150" class="arrow"/>
+  <line x1="500" y1="180" x2="510" y2="190" class="arrow"/>
+
+</svg>
