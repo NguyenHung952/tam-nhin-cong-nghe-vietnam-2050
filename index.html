@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Giám sát rò rỉ khí gas</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+
+  <div class="max-w-5xl mx-auto p-6">
+    <h1 class="text-2xl font-bold text-center mb-6">🚨 Hệ thống giám sát rò rỉ khí gas</h1>
+
+    <!-- Biểu đồ -->
+    <div class="bg-white shadow p-4 rounded mb-6">
+      <h2 class="text-lg font-semibold mb-2">Biểu đồ nồng độ khí gas</h2>
+      <canvas id="gasChart" height="100"></canvas>
+      <p class="mt-4 text-base" id="status">✅ Bình thường</p>
+      <button id="leakBtn" class="mt-4 px-4 py-2 bg-green-500 hover:bg-green-600 text-white rounded">
+        Bắt đầu mô phỏng rò rỉ
+      </button>
+    </div>
+
+    <!-- Sơ đồ hệ thống -->
+    <div class="bg-white shadow p-4 rounded mb-6">
+      <h2 class="text-lg font-semibold mb-2">Sơ đồ hệ thống</h2>
+      <div class="overflow-auto border p-4">
+        <img src="assets/system_diagram.svg" alt="System Diagram" usemap="#components" class="w-full max-w-3xl mx-auto" />
+
+        <!-- Mô phỏng các vùng chọn tương tác -->
+        <div class="relative w-full max-w-3xl mx-auto -mt-[400px] h-[400px]">
+          <div data-component="sensor" class="absolute top-[50px] left-[80px] w-[40px] h-[40px] cursor-pointer"></div>
+          <div data-component="esp32" class="absolute top-[150px] left-[160px] w-[40px] h-[40px] cursor-pointer"></div>
+          <div data-component="fan" class="absolute top-[50px] left-[250px] w-[40px] h-[40px] cursor-pointer"></div>
+          <div data-component="server" class="absolute top-[200px] left-[320px] w-[40px] h-[40px] cursor-pointer"></div>
+          <div data-component="dashboard" class="absolute top-[100px] left-[380px] w-[60px] h-[40px] cursor-pointer"></div>
+        </div>
+      </div>
+      <p id="component-info" class="mt-4 text-gray-700">Chọn thành phần để xem thông tin.</p>
+    </div>
+
+    <!-- Footer -->
+    <p class="text-sm text-center text-gray-500 mt-8">© 2025 Hệ thống mô phỏng rò rỉ khí gas</p>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
