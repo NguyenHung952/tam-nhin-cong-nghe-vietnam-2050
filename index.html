@@ -1,49 +1,103 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Giám sát rò rỉ khí gas</title>
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <script src="https://cdn.tailwindcss.com"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Tầm nhìn Công nghệ Việt Nam 2050: Infographic</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Chart.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
+
+    <!-- Link to external CSS -->
+    <link rel="stylesheet" href="styles.css" />
 </head>
-<body class="bg-gray-50 text-gray-800 font-sans">
+<body class="antialiased">
+    <div class="container mx-auto px-4 py-12 md:py-20">
+        <header class="text-center mb-20">
+            <h1 class="text-4xl md:text-6xl font-extrabold mb-4">
+                <span class="gradient-text">Chân Trời Số Việt Nam 2050</span>
+            </h1>
+            <p class="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
+                Một phân tích trực quan về sự hội tụ của các ngành Điện tử, Viễn thông và AI, định hình tương lai công nghệ và kinh tế của quốc gia.
+            </p>
+        </header>
 
-  <div class="max-w-5xl mx-auto p-6">
-    <h1 class="text-2xl font-bold text-center mb-6">🚨 Hệ thống giám sát rò rỉ khí gas</h1>
+        <!-- Các section khác giống như cũ -->
 
-    <!-- Biểu đồ -->
-    <div class="bg-white shadow p-4 rounded mb-6">
-      <h2 class="text-lg font-semibold mb-2">Biểu đồ nồng độ khí gas</h2>
-      <canvas id="gasChart" height="100"></canvas>
-      <p class="mt-4 text-base" id="status">✅ Bình thường</p>
-      <button id="leakBtn" class="mt-4 px-4 py-2 bg-green-500 hover:bg-green-600 text-white rounded">
-        Bắt đầu mô phỏng rò rỉ
-      </button>
+        <!-- KPI Section -->
+        <section id="kpi" class="mb-20">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="kpi-card text-center">
+                    <p class="text-5xl md:text-6xl font-extrabold text-[#00A6FB]">200 Tỷ USD</p>
+                    <h3 class="text-xl font-bold mt-2">Kinh tế số 2030</h3>
+                    <p class="text-gray-500 mt-1">Mục tiêu giá trị kinh tế số, cho thấy tham vọng tăng trưởng vượt bậc.</p>
+                </div>
+                <div class="kpi-card text-center">
+                    <p class="text-5xl md:text-6xl font-extrabold text-[#E83F6F]">130 Tỷ USD</p>
+                    <h3 class="text-xl font-bold mt-2">Đóng góp của AI 2040</h3>
+                    <p class="text-gray-500 mt-1">Dự báo giá trị AI mang lại cho nền kinh tế thông qua năng suất và dịch vụ mới.</p>
+                </div>
+                <div class="kpi-card text-center">
+                    <p class="text-5xl md:text-6xl font-extrabold text-[#22B573]">50,000</p>
+                    <h3 class="text-xl font-bold mt-2">Kỹ sư AI</h3>
+                    <p class="text-gray-500 mt-1">Mục tiêu phát triển nguồn nhân lực AI chất lượng cao đến năm 2030.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Foundations Section -->
+        <section id="foundations" class="mb-20">
+            <h2 class="section-title">Nền Tảng Vững Chắc: Hai Động Lực Tăng Trưởng</h2>
+            <p class="section-subtitle">Ngành điện tử và viễn thông là bệ phóng cho các tham vọng số của Việt Nam, ghi nhận sự tăng trưởng ấn tượng và thu hút đầu tư nước ngoài mạnh mẽ.</p>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-bold text-center mb-4">Tăng Trưởng Xuất Khẩu Điện Tử (Tỷ USD)</h3>
+                    <div class="chart-container">
+                        <canvas id="electronicsExportChart"></canvas>
+                    </div>
+                    <p class="text-center text-gray-600 mt-4">Xuất khẩu điện tử là trụ cột kinh tế, với sự tăng trưởng mạnh mẽ, khẳng định vị thế trung tâm sản xuất toàn cầu.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-bold text-center mb-4">Dự Báo Thị Trường Viễn Thông (Tỷ USD)</h3>
+                    <div class="chart-container">
+                        <canvas id="telecomMarketChart"></canvas>
+                    </div>
+                    <p class="text-center text-gray-600 mt-4">Doanh thu viễn thông tăng trưởng ổn định, được thúc đẩy bởi dữ liệu di động và việc triển khai 5G.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-bold text-center mb-4">Đối Tác Thương Mại Điện Tử Chính (2024)</h3>
+                    <div class="chart-container">
+                        <canvas id="tradePartnersChart"></canvas>
+                    </div>
+                    <p class="text-center text-gray-600 mt-4">Chuỗi cung ứng điện tử của Việt Nam có sự liên kết chặt chẽ với các nền kinh tế lớn trong khu vực và toàn cầu.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-bold text-center mb-4">Thị Phần Xuất Khẩu Điện Tử (2024)</h3>
+                    <div class="chart-container" style="height: 320px; max-height: 320px;">
+                        <canvas id="exportCompositionChart"></canvas>
+                    </div>
+                    <p class="text-center text-gray-600 mt-4">Điện thoại thông minh và linh kiện máy tính chiếm phần lớn giá trị xuất khẩu, phản ánh vai trò trung tâm lắp ráp.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Các section khác giữ nguyên -->
+
+        <footer class="text-center mt-20 border-t pt-8">
+            <p class="text-gray-600">Bằng cách đầu tư vào nhân tài, thúc đẩy đổi mới trong nước và xây dựng hạ tầng số toàn diện, Việt Nam có đủ tiềm năng để trở thành một cường quốc công nghệ trong khu vực và trên thế giới vào giữa thế kỷ này.</p>
+            <p class="text-sm text-gray-400 mt-4">Infographic được tạo bởi AI dựa trên báo cáo "Chân trời số của Việt Nam".</p>
+        </footer>
     </div>
 
-    <!-- Sơ đồ hệ thống -->
-    <div class="bg-white shadow p-4 rounded mb-6">
-      <h2 class="text-lg font-semibold mb-2">Sơ đồ hệ thống</h2>
-      <div class="overflow-auto border p-4">
-        <img src="assets/system_diagram.svg" alt="System Diagram" usemap="#components" class="w-full max-w-3xl mx-auto" />
-
-        <!-- Mô phỏng các vùng chọn tương tác -->
-        <div class="relative w-full max-w-3xl mx-auto -mt-[400px] h-[400px]">
-          <div data-component="sensor" class="absolute top-[50px] left-[80px] w-[40px] h-[40px] cursor-pointer"></div>
-          <div data-component="esp32" class="absolute top-[150px] left-[160px] w-[40px] h-[40px] cursor-pointer"></div>
-          <div data-component="fan" class="absolute top-[50px] left-[250px] w-[40px] h-[40px] cursor-pointer"></div>
-          <div data-component="server" class="absolute top-[200px] left-[320px] w-[40px] h-[40px] cursor-pointer"></div>
-          <div data-component="dashboard" class="absolute top-[100px] left-[380px] w-[60px] h-[40px] cursor-pointer"></div>
-        </div>
-      </div>
-      <p id="component-info" class="mt-4 text-gray-700">Chọn thành phần để xem thông tin.</p>
-    </div>
-
-    <!-- Footer -->
-    <p class="text-sm text-center text-gray-500 mt-8">© 2025 Hệ thống mô phỏng rò rỉ khí gas</p>
-  </div>
-
-  <script src="js/main.js"></script>
+    <!-- Link tới file JS -->
+    <script src="scripts.js"></script>
 </body>
 </html>
